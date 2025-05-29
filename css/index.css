@@ -1,0 +1,166 @@
+@font-face {
+font-family: 'SequelWide55';
+src: url('../font/BHN SEQUEL 100 WIDE 55.OTF') format('opentype');
+}
+
+@font-face {
+font-family: 'SequelWide95';
+src: url('../font/BHN SEQUEL 100 WIDE 95.OTF') format('opentype');
+}
+
+
+
+.modalkt{
+
+    z-index: 9999;
+}
+.Modal_contentkt{
+background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))   !important;
+}
+.home_redeem {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://file.hstatic.net/200001005225/file/fullscreen_nh_pm__pc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redeem-box {
+    margin-top: 240px;
+}
+.BoGoc_input{
+    background-color: #3e3e3e;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 5.5% 100%, 0 75%);
+    padding: 15px;
+    /* width: 520px;
+    height: 110px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 27px;
+}
+.redeem-input {
+    position: relative;
+    padding: 12px 20px;
+    border: 10px solid #292929;
+    border-radius: 20px;
+    outline: none;
+    font-size: 18px;
+    width: 500px;
+    height: 70px;
+    color: #000;
+    background-color: #fff;
+    font-weight: 500;
+    font-family: 'svn veneer' !important;
+    border: none;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 4% 100%, 0 75%);
+    
+}
+
+
+
+
+.redeem-input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: #999;
+    font-family: 'SequelWide55', sans-serif !important;
+}
+
+.BoGoc_button{
+    background-color: #3e3e3e;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 9% 100%, 0 71%);
+    padding: 15px;
+    /* width: 520px;
+    height: 110px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 27px;
+
+}
+
+.redeem-button {
+    padding: 12px 20px;
+    background-color: #ffeb00;
+    /* border: 10px solid #3d4133; */
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 70px;
+    width: 300px;
+    font-size: 1.7rem;
+    font-family: 'svn veneer' !important;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 7% 100%, 0 71%);
+
+    font-family: 'SequelWide95', sans-serif !important;
+}
+
+.redeem-button:hover {
+    background-color: #ffe100;
+    transform: scale(1.05);
+}
+
+.img_Win_prizes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_Win_prizes > img {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .home_redeem {
+        background-image: url('https://file.hstatic.net/200001005225/file/fullscreen_nh_pm__mobile__1_.jpg');
+    }
+    .redeem-box {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+        
+    .BoGoc_input{
+        padding: 6px;
+        border-radius: 15px;
+    }
+    .redeem-input,
+    .redeem-button {
+        width: 100%;
+        height: 60px;
+        font-size: 1rem;
+        border-radius: 10px;
+        /* border-width: 5px; */
+    }
+
+    .redeem-input::placeholder {
+        font-size: 16px;
+    }
+
+        .BoGoc_button{
+            border-radius: 15px;
+            padding: 6px;
+        }
+    .redeem-button {
+        font-size: 1.2rem;
+    }
+
+    .relative{
+        overflow-y: auto;      
+    }
+}
