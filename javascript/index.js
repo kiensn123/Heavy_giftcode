@@ -11,7 +11,7 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
     const button = document.getElementById("code_redeem_submit");
     button.disabled = true;
     const originalText = button.innerText;
-    button.innerText = "Đang kiểm tra...";
+    button.innerText = "Kiểm tra...";
 
     try {
         const response = await fetch(apiUrl);
