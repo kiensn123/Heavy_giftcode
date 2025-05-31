@@ -21,15 +21,15 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
         if (result.status === "success") {
             const image_Ao = document.getElementById('img_prizes');
             if (result.item === "HEAVY Legacy Card – 5 Years Edition") {
-                image_Ao.src = "https://file.hstatic.net/200001005225/file/boxcard.png";
+                image_Ao.src = "https://file.hstatic.net/200001005225/file/boxcard_14c3cbc27f504b22bb733f05249e080d.png";
             } else if (result.item === "HEAVY Bucket Hunter") {
-                image_Ao.src = "https://file.hstatic.net/200001005225/file/n_n.png";
+                image_Ao.src = "https://file.hstatic.net/200001005225/file/n_n_3805702964cc4c0fbc5ad2b149d61851.png";
             } else if (result.item === "HEAVY Shadow Armor (Limited Edition)") {
-                image_Ao.src = "https://file.hstatic.net/200001005225/file/_okhoac.png";
+                image_Ao.src = "https://file.hstatic.net/200001005225/file/_okhoac_b82a4ed15f7c46db85e63c8ab20ac918.png";
             } else if (result.item === "HEAVY LEGACY CONTINUES") {
-                image_Ao.src = "https://file.hstatic.net/200001005225/file/_otrang.png";
+                image_Ao.src = "https://file.hstatic.net/200001005225/file/_otrang_0c1202f7ee454af5a8028c7e6413b14a.png";
             } else if (result.item === "HEAVY Pro Jersey 2025") {
-                image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey.png";
+                image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey_da2ef868cf234d5fade9c8bd12b20b2c.png";
             }
 
             const modal = document.getElementById('resultModal');
