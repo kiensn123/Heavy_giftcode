@@ -31,7 +31,6 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
             } else if (result.item === "HEAVY Pro Jersey 2025") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey_da2ef868cf234d5fade9c8bd12b20b2c.png";
             }
-
             const modal = document.getElementById('resultModal');
             modal.classList.remove('hidden');
             modal.setAttribute('aria-hidden', 'false');
