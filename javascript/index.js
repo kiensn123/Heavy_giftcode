@@ -34,9 +34,15 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
         
                 Swal.fire({
                     title: '🎉 Chúc mừng!',
-                    text: `Bạn đã nhận được phần thưởng: ${result.item}`,
+                    html: `
+                        Bạn đã nhận được phần thưởng: <strong>${result.item}</strong><br><br>
+                        Truy cập HEAVY STORE để sử dụng mã VOUCHER khi mua hàng.<br><br>
+                        <a href="https://heavy.gg" target="_blank" class="chuyenTranvoucher swal2-confirm swal2-styled" style="text-decoration: none;">
+                             HEAVY STORE
+                        </a>
+                    `,
                     icon: 'success',
-                    confirmButtonText: 'Tuyệt vời!'
+                    showConfirmButton: false
                 });
                 return;
             }
