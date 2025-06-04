@@ -32,7 +32,12 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey_da2ef868cf234d5fade9c8bd12b20b2c.png";
             }else{
         
-               alert(`🎉 Chúc mừng! Bạn đã nhận được phần thưởng: ${result.item} 🎁`);
+                Swal.fire({
+                    title: '🎉 Chúc mừng!',
+                    text: `Bạn đã nhận được phần thưởng: ${result.item}`,
+                    icon: 'success',
+                    confirmButtonText: 'Tuyệt vời!'
+                });
                 return;
             }
             const modal = document.getElementById('resultModal');
