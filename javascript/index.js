@@ -30,6 +30,10 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/_otrang_0c1202f7ee454af5a8028c7e6413b14a.png";
             } else if (result.item === "HEAVY Pro Jersey 2025") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey_da2ef868cf234d5fade9c8bd12b20b2c.png";
+            }else{
+        
+               alert(`🎉 Chúc mừng! Bạn đã nhận được phần thưởng: ${result.item} 🎁`);
+                return;
             }
             const modal = document.getElementById('resultModal');
             modal.classList.remove('hidden');

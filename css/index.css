@@ -14,8 +14,33 @@ src: url('../font/BHN SEQUEL 100 WIDE 95.OTF') format('opentype');
 
     z-index: 9999;
 }
+.Modal_contentkt_border{
+    padding: 20px;  
+    background-color: #3e3e3e;
+    border-radius: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 5% 100%, 0 89%);
+     font-family: 'SequelWide55', sans-serif ;
+
+}
 .Modal_contentkt{
-background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))   !important;
+    background-color: white   !important;
+    border-radius: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 5% 100%, 0 89%);
+
+}
+
+.ketqua{
+    color: rgb(0, 0, 0) !important;
+    font-family: 'SequelWide95', sans-serif !important;
+}
+.daux{
+    color: red;
+
+  
+}
+
+.Modal_contentkt_border label{
+    color: #000;
 }
 .home_redeem {
     width: 100vw;
@@ -45,6 +70,7 @@ background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))   !important;
     align-items: center;
 
     border-radius: 27px;
+
 }
 .redeem-input {
     position: relative;
@@ -125,6 +151,16 @@ background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))   !important;
 
 
 @media (max-width: 768px) {
+
+    .Modal_contentkt_border{
+        padding: 10px;
+        border-radius: 25px;
+       clip-path: polygon(0 0, 100% 0, 100% 99%, 5% 100%, 0 97%);
+    }
+    .Modal_contentkt{
+        border-radius: 20px;
+        clip-path: polygon(0 0, 100% 0, 100% 99%, 5% 100%, 0 97%);
+    }
     .home_redeem {
         background-image: url('https://file.hstatic.net/200001005225/file/fullscreen_nh_pm__mobile__1_.jpg');
     }

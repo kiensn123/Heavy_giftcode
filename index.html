@@ -12,7 +12,6 @@
 
         <link rel="stylesheet" href="./css/index.css">
         <link rel="icon" href="https://file.hstatic.net/200001005225/file/heavy_ff.png" type="image/x-icon">
-
         <meta property="og:title" content="NHẬN QUÀ TỪ HEAVY" />
         <meta property="og:description" content="Phần quà cực chất từ Heavy!" />
         <meta property="og:image" content="https://file.hstatic.net/200001005225/file/thumbnaildebugfacebook_600x300.jpg" />
@@ -37,77 +36,79 @@
             <div id="resultModal" tabindex="-1" aria-hidden="true" class="modalkt hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-black bg-opacity-50" data-modal-backdrop="static">
                 <div class="relative p-4 w-[90%]  max-h-[90vh] mx-auto ">
                     <!-- Modal content -->
-                    <div class="Modal_contentkt relative bg-white rounded-lg shadow dark:bg-gray-700">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white" id="resultModalLabel">
-                                Kết quả đổi thưởng
-                            </h3>
-                            <button type="button" id="nutthoat_" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="resultModal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                </svg>
-                                <span class="sr-only">Đóng</span>
-                            </button>
+                     <div class="Modal_contentkt_border">
+                        <div class="Modal_contentkt relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 class="ketqua text-xl font-semibold text-gray-900 dark:text-white" id="resultModalLabel">
+                                    Kết quả đổi thưởng
+                                </h3>
+                                <button type="button" id="nutthoat_" class="daux text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="resultModal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    </svg>
+                                    <span class="sr-only">Đóng</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                        <div class="p-4 md:p-6 space-y-6" id="modalContent">
+            <div id="modalContent_ThongTin"></div>
+
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Hình ảnh phần thưởng -->
+                <div class="w-full md:w-1/2">
+                    <div class="w-full aspect-[4/3]">
+                        <img id="img_prizes"
+                            src="https://file.hstatic.net/200001005225/file/_okhoac.png"
+                            class="w-full h-full object-cover rounded-lg shadow-md" />
+                    </div>
+                </div>
+
+                <!-- Form thông tin người nhận -->
+                <div class="w-full md:w-3/5">
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="fullName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Họ và tên</label>
+                            <input type="text" id="fullName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                         </div>
-                        <!-- Modal body -->
-                    <div class="p-4 md:p-6 space-y-6" id="modalContent">
-        <div id="modalContent_ThongTin"></div>
-
-        <div class="flex flex-col md:flex-row gap-6">
-            <!-- Hình ảnh phần thưởng -->
-            <div class="w-full md:w-1/2">
-                <div class="w-full aspect-[4/3]">
-                    <img id="img_prizes"
-                        src="https://file.hstatic.net/200001005225/file/_okhoac.png"
-                        class="w-full h-full object-cover rounded-lg shadow-md" />
-                </div>
-            </div>
-
-            <!-- Form thông tin người nhận -->
-            <div class="w-full md:w-3/5">
-                <div class="grid gap-6 mb-6 md:grid-cols-2">
-                    <div>
-                        <label for="fullName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Họ và tên</label>
-                        <input type="text" id="fullName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <div>
+                            <label for="phoneNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Số điện thoại</label>
+                            <input type="tel" id="phoneNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required pattern="0[0-9]{9,10}">
+                        </div>
                     </div>
-                    <div>
-                        <label for="phoneNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Số điện thoại</label>
-                        <input type="tel" id="phoneNumber" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required pattern="0[0-9]{9,10}">
+
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
-                </div>
 
-                <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                </div>
-
-                <div class="grid gap-6 mb-6 md:grid-cols-2">
-                    <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tỉnh/Thành phố</label>
-                        <select id="province" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></select>
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tỉnh/Thành phố</label>
+                            <select id="province" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quận/Huyện</label>
+                            <select id="district" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></select>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quận/Huyện</label>
-                        <select id="district" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></select>
+
+                    <div class="mb-6">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phường/Xã</label>
+                        <select id="ward" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></select>
                     </div>
-                </div>
 
-                <div class="mb-6">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phường/Xã</label>
-                    <select id="ward" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></select>
-                </div>
-
-                <div class="mb-6">
-                    <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Địa chỉ nhận thưởng</label>
-                    <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân" required>
+                    <div class="mb-6">
+                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Địa chỉ nhận thưởng</label>
+                        <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân" required>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-                        <!-- Modal footer -->
-                        <div class="flex items-center justify-end p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button id="confirm_submit" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Xác Nhận</button>
+                            <!-- Modal footer -->
+                            <div class="flex items-center justify-end p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                <button id="confirm_submit" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Xác Nhận</button>
+                            </div>
                         </div>
                     </div>
                 </div>
