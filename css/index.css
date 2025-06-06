@@ -151,7 +151,7 @@ src: url('../font/BHN SEQUEL 100 WIDE 95.OTF') format('opentype');
 
 .chuyenTranvoucher{
     padding: 5px 8px;
-    font-size: 0.8rem;
+    font-size: 0.8rem;  
     border: 2px solid #3e3e3e;
     background-color: #ffe100;
     color: black;

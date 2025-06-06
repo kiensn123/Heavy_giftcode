@@ -30,15 +30,28 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/_otrang_0c1202f7ee454af5a8028c7e6413b14a.png";
             } else if (result.item === "HEAVY Pro Jersey 2025") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey_da2ef868cf234d5fade9c8bd12b20b2c.png";
-            }else{
-        
+            }else{  
+                
                 Swal.fire({
                     title: '🎉 Chúc mừng!',
                     html: `
-                        Bạn đã nhận được phần thưởng: <strong>${result.item}</strong><br><br>
-                        Truy cập HEAVY STORE để sử dụng mã VOUCHER khi mua hàng.<br><br>
+                        <p>Bạn đã nhận được phần thưởng: <strong>${result.item}</strong></p>
+                        <p>Truy cập HEAVY STORE để sử dụng mã VOUCHER khi mua hàng.</p>
+                        <div style="
+                            background-color: #f0f0f0;
+                            padding: 15px;
+                            margin: 10px 0;
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #d32f2f;
+                            border: 2px dashed #d32f2f;
+                            border-radius: 10px;
+                            display: inline-block;
+                        ">
+                            ${result.code}
+                        </div><br>
                         <a href="https://heavy.gg" target="_blank" class="chuyenTranvoucher swal2-confirm swal2-styled" style="text-decoration: none;">
-                             HEAVY STORE
+                            HEAVY STORE
                         </a>
                     `,
                     icon: 'success',
