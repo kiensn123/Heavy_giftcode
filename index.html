@@ -101,7 +101,22 @@
 
                     <div class="mb-6">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Địa chỉ nhận thưởng</label>
-                        <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân" required>
+                        <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="VD:Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân" required>
+                    </div>
+                    <div class="mb-6" id="TrungThuongAo">
+                        <label for="size_ao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Size áo</label>
+                        
+                    <div class="flex gap-2 items-center">
+                        <input type="text" id="size_ao" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="VD:XL" required>
+                        
+                        <!-- Button mở ảnh -->
+                      <button onclick="openSizeModal()" type="button"
+                        class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        XEM
+                    </button>
+
+                   
+                    </div>
                     </div>
                 </div>
             </div>
@@ -118,6 +133,18 @@
         <span></span>
                 
        
+        <!-- Modal hiển thị bảng size áo -->
+        <div id="sizeModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-60 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full p-4 relative">
+            <!-- Nút đóng -->
+            <button onclick="closeSizeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl font-bold">&times;</button>
+            <!-- Ảnh size áo -->
+            <img src="https://file.hstatic.net/200001005225/file/_o-heavy-pro-jersey-2025_fixed.jpg" alt="Bảng size áo"
+            class="w-full h-auto rounded-lg object-contain" id ="TrungThuongAo_AnhSize">
+        </div>
+        </div>
+
+
         <footer class="footer">
             <div class="footer_div footer_div_border">
                 <div  class="footer_div_logo">            

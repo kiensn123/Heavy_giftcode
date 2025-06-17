@@ -1,3 +1,9 @@
+
+var Form_Dien_Size = document.getElementById("TrungThuongAo");
+var Anh_Size = document.getElementById("TrungThuongAo_AnhSize");
+
+
+
 document.getElementById("code_redeem_submit").addEventListener("click", async function () {
     const code = document.getElementById("code_redeem").value.trim();
 
@@ -22,14 +28,19 @@ document.getElementById("code_redeem_submit").addEventListener("click", async fu
             const image_Ao = document.getElementById('img_prizes');
             if (result.item === "HEAVY Legacy Card – 5 Years Edition") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/boxcard_14c3cbc27f504b22bb733f05249e080d.png";
+                Set_Img_AoSize(false);
             } else if (result.item === "HEAVY Bucket Hunter") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/n_n_3805702964cc4c0fbc5ad2b149d61851.png";
+                Set_Img_AoSize(false);
             } else if (result.item === "HEAVY Shadow Armor (Limited Edition)") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/_okhoac_b82a4ed15f7c46db85e63c8ab20ac918.png";
+                Set_Img_AoSize(true,"https://file.hstatic.net/200001005225/file/_o-kho_c_fixed.jpg")
             } else if (result.item === "HEAVY LEGACY CONTINUES") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/_otrang_0c1202f7ee454af5a8028c7e6413b14a.png";
+                Set_Img_AoSize(true,"https://file.hstatic.net/200001005225/file/_o-tr_ng_fixed.jpg")
             } else if (result.item === "HEAVY Pro Jersey 2025") {
                 image_Ao.src = "https://file.hstatic.net/200001005225/file/jersey_da2ef868cf234d5fade9c8bd12b20b2c.png";
+                Set_Img_AoSize(true,"https://file.hstatic.net/200001005225/file/_o-heavy-pro-jersey-2025_fixed.jpg")
             }else{  
                 
                 Swal.fire({
@@ -92,6 +103,7 @@ document.getElementById("confirm_submit").addEventListener("click", async functi
     const phoneNumber = document.getElementById("phoneNumber").value.trim();
     const email = document.getElementById("email").value.trim();
     const address = document.getElementById("address").value.trim();
+    const size_ao = document.getElementById("size_ao").value.trim();
     const thanhpho = document.getElementById("province").selectedOptions[0].text;
     const quanhuyen = document.getElementById("district").selectedOptions[0].text;
     const phuongxa = document.getElementById("ward").selectedOptions[0].text;
@@ -104,7 +116,7 @@ document.getElementById("confirm_submit").addEventListener("click", async functi
         return;
     }
 
-    const url = `https://script.google.com/macros/s/AKfycbzmdam0TO19f6hbW2Vss6MUT6GWKczf4ztKNGnPoZi_HABUZp0SEGV1ieiS3pjyIPWL/exec?Redeem_code=${encodeURIComponent(code)}&fullName=${encodeURIComponent(fullName)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}&thanhpho=${encodeURIComponent(thanhpho)}&quanhuyen=${encodeURIComponent(quanhuyen)}&phuongxa=${encodeURIComponent(phuongxa)}&address=${encodeURIComponent(address)}`;
+    const url = `https://script.google.com/macros/s/AKfycbzmdam0TO19f6hbW2Vss6MUT6GWKczf4ztKNGnPoZi_HABUZp0SEGV1ieiS3pjyIPWL/exec?Redeem_code=${encodeURIComponent(code)}&fullName=${encodeURIComponent(fullName)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}&thanhpho=${encodeURIComponent(thanhpho)}&quanhuyen=${encodeURIComponent(quanhuyen)}&phuongxa=${encodeURIComponent(phuongxa)}&address=${encodeURIComponent(address)}&size_ao=${encodeURIComponent(size_ao)}`;
 
     try {
         const response = await fetch(url);
@@ -168,3 +180,24 @@ document.getElementById("district").addEventListener("change", async function ()
 });
 
 fetchProvinces();
+
+///Tắt mở modle hình ảnh size
+
+function Set_Img_AoSize(HienThi,Scr_New){
+    if(HienThi){
+        Form_Dien_Size.style.display = "block";
+        Anh_Size.src = Scr_New;
+    }else{
+        Form_Dien_Size.style.display = "none";
+    }
+
+}
+
+
+function openSizeModal() {
+    document.getElementById("sizeModal").classList.remove("hidden");
+}
+
+function closeSizeModal() {
+    document.getElementById("sizeModal").classList.add("hidden");
+}
